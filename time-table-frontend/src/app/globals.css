@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: var(--font-arabic), sans-serif;
+    --font-sans: var(--font-arabic);
+    --radius: 0.5rem;
+    --radius-language: 0.375rem;
+
+    /* LanguageToggle specific variables */
+    --language-toggle: 240 5% 96%;
+    --language-toggle-foreground: 240 10% 4%;
+    --language-toggle-hover: 240 5% 90%;
+    --language-toggle-active: 240 5% 84%;
+
+    --language-dropdown-bg: 0 0% 100%;
+    --language-dropdown-item-bg: 0 0% 100%;
+    --language-dropdown-item-hover: 240 5% 96%;
+    --language-dropdown-item-active: 240 5% 90%;
+
+    --blur-language: 8px;
+    --radius: 0.625rem;
+    --background: 1 0 0;
+    --foreground: 0.145 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.145 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.145 0 0;
+    --primary: 0.205 0 0;
+    --primary-foreground: 0.985 0 0;
+    --secondary: 0.97 0 0;
+    --secondary-foreground: 0.205 0 0;
+    --muted: 0.97 0 0;
+    --muted-foreground: 0.556 0 0;
+    --accent: 0.97 0 0;
+    --accent-foreground: 0.205 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --border: 0.922 0 0;
+    --input: 0.922 0 0;
+    --ring: 0.708 0 0;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  .dark {
+    --background: 0.145 0 0;
+    --foreground: 0.985 0 0;
+    --card: 0.205 0 0;
+    --card-foreground: 0.985 0 0;
+    --popover: 0.205 0 0;
+    --popover-foreground: 0.985 0 0;
+    --primary: 0.922 0 0;
+    --primary-foreground: 0.205 0 0;
+    --secondary: 0.269 0 0;
+    --secondary-foreground: 0.985 0 0;
+    --muted: 0.269 0 0;
+    --muted-foreground: 0.708 0 0;
+    --accent: 0.269 0 0;
+    --accent-foreground: 0.985 0 0;
+    --destructive: 0.704 0.191 22.216;
+    --border: 1 0 0;
+    --input: 1 0 0;
+    --ring: 0.556 0 0;
+    --chart-1: 0.488 0.243 264.376;
+    --chart-2: 0.696 0.17 162.48;
+    --chart-3: 0.769 0.188 70.08;
+    --chart-4: 0.627 0.265 303.9;
+    --chart-5: 0.645 0.246 16.439;
+    --sidebar: 0.205 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.488 0.243 264.376;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.269 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 1 0 0;
+    --sidebar-ring: 0.556 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    font-family: var(--font-arabic);
+  }
+}
+
+/* For RTL languages */
+.font-arabic {
+  font-family: "YourArabicFont", sans-serif;
+}
+
+/* For LTR languages */
+.font-sans {
+  font-family: "YourLatinFont", sans-serif;
+}
+
+/* Ensure form elements maintain proper spacing in RTL */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] .rtl-pl-5 {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+[dir="rtl"] .rtl-pr-5 {
+  padding-right: 0;
+  padding-left: 1.25rem;
+}
+
+/* List items in RTL */
+[dir="rtl"] ul {
+  padding-right: 1.25rem;
+  padding-left: 0;
+}
+
+/* For RTL languages */
+.font-arabic {
+  font-family: "YourArabicFont", sans-serif;
+}
+
+/* For LTR languages */
+.font-sans {
+  font-family: "YourLatinFont", sans-serif;
+}
+
+/* Ensure form elements maintain proper spacing in RTL */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-mr-2 {
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .rtl-ml-2 {
+  margin-left: 0.5rem;
+}
+
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.otp-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
